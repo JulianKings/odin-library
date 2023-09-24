@@ -108,11 +108,11 @@ body {
 
 .book-card .book-not-read {
     background-color: #cacaca;
-    width: 80%;
-    padding: 0.4rem 0.4rem;
+    padding: 0.4rem 1.4rem;
     text-align: center;
     border-radius: 0.4rem;
     transition: all .2s ease-in-out; 
+    user-select: none;
 }
 
 .book-card .book-not-read:hover {
@@ -126,11 +126,11 @@ body {
 
 .book-card .book-read {
     background-color: #98ff5c;
-    width: 80%;
-    padding: 0.4rem 0.4rem;
+    padding: 0.4rem 1.4rem;
     text-align: center;
     border-radius: 0.4rem;
     transition: all .2s ease-in-out; 
+    user-select: none;
 }
 
 .book-card .book-read:hover {
@@ -156,4 +156,124 @@ body {
     background: url('../images/trash-bigger.svg') no-repeat;
     width: 32px;
     height: 32px;
+}
+
+#newBookDialog {
+    background-color: white;
+    border-radius: 0.4rem;
+    box-shadow: 0.1rem 0.3em 0.3rem rgb(0, 0, 0, 0.05);
+    border: none;
+    transform: scale(0.1);
+    transition: all 0.8s ease-in-out;
+}
+
+#newBookDialog.open {
+    transform: scale(1);
+}
+
+#newBookDialog.hide {
+    transform: scale(0.1);
+}
+
+.new-book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.new-book-form .new-book-form-title
+{
+    text-align: center;
+    margin-bottom: 0.4rem;
+}
+
+.new-book-form .form-input
+{
+    position: relative;
+    height: 4rem;
+}
+
+.new-book-form .form-input label {
+    position: absolute;
+    font-size: 0.9rem;
+    top: 1rem;
+    left: 0.65rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: #132544;
+    transition: all 0.6s ease-in-out;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.4rem;
+    display: none;
+}
+
+.new-book-form .form-input input {
+    margin: 0.3rem 0.1rem;
+    padding: 0.6rem 0.4rem;
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    border-radius: 0.2rem;
+}
+
+.new-book-form .form-error {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    color: #500000;
+    position: relative;
+    top: -0.8rem;
+}
+
+.new-book-form .form-input input:focus {
+    outline-style: none;
+    border: 1px solid #132544;
+}
+
+.new-book-form .new-book-form-read {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.new-book-form .new-book-form-read-caption {
+    font-size: 0.9rem;
+}
+
+.new-book-form .new-book-form-read-checkbox {
+    background-color: #e5e7eb;
+    width: 21px;
+    height: 21px;
+    font-size: 18px;
+    padding-left: 1px;
+    border-radius: 4px;
+    text-align: center;
+    margin-left: 2.7rem;
+    user-select: none;
+    border: 1px solid #132544;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.new-book-form .form-button {
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.new-book-form .form-button button {
+    width: 85%;
+    padding: 0.4rem 0rem;
+    margin-left: 7.5%;
+    border: 0; 
+    border-radius: 0.4rem;
+    background-color: #e5e7eb;
+    transition: all 0.3s ease-in-out;
+}
+
+.new-book-form .form-button button:hover {
+
+    background-color: #dcdddf;
+    transform: scale(1.1);
+}
+
+.new-book-form .form-button button:active {
+
+    background-color: #cbcbcc;
 }

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library</title>
+    <title>Odin's Library</title>
+    <link rel="shortcut icon" href="images/bookicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/style.css">
     <script type="text/javascript" src="scripts/global.js" defer></script>
 </head>
@@ -17,6 +18,34 @@
         </div>
         <div class="book-list"></div>
     </div>
+
+    <dialog id="newBookDialog">
+        <div class="new-book-form">
+            <div class="new-book-form-title">Add a new book</div>
+            <form action="" type="dialog">
+                <div class="form-input">
+                    <label for="bookTitle">Title</label>
+                    <input type="text" name="book_title" id="bookTitle" maxlength="32" required placeholder="TITLE">
+                </div>
+                <div class="form-error" id="formTitleError"></div>
+                <div class="form-input">
+                    <label for="bookAuthor">Author</label>
+                    <input type="text" name="book_author" id="bookAuthor" maxlength="32" required placeholder="AUTHOR">
+                </div>
+                <div class="form-error" id="formAuthorError"></div>
+                <div class="form-input">
+                    <label for="bookPages">Pages</label>
+                    <input type="number" name="book_pages" id="bookPages" maxlength="10000" required placeholder="PAGES">
+                </div>
+                <div class="form-error" id="formPagesError"></div>
+                <div class="new-book-form-read">
+                    <div class="new-book-form-read-caption">Have you read this <br/> book?</div>                        
+                    <div class="new-book-form-read-checkbox hov"></div>
+                </div>
+                <div class="form-button"><button type="submit">Add book</button></div>
+            </form>
+        </div>
+    </dialog>
     
 </body>
 </html>
