@@ -173,23 +173,25 @@ newBookSubmit.addEventListener('click', (event) => {
 });
 
 
-// constructors
-function Book(title, author, pages, read)
-{
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
+// classes
+class Book {
+    constructor(title, author, pages, read)
+    {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 
-// prototype functions
-Book.prototype.info = function() {
+
+    info() {
         let writeRead = (this.read) ? 'read' : 'not read yet';
         return `${this.title} by ${this.author}, ${this.pages} pages, ${writeRead}`;
     }
 
-Book.prototype.alternateRead = function () {
-    this.read = !this.read;
+    alternateRead() {
+        this.read = !this.read;
+    }
 }
 
 // functions
